@@ -1,0 +1,18 @@
+### model
+model_name_or_path: /root/autodl-tmp/models/llm-research/meta-llama-3___1-8b-instruct
+adapter_name_or_path: /root/autodl-tmp/saves/llama31-8b/lora/sft
+
+### method
+finetuning_type: lora
+
+### dataset
+task: mmlu_test  # choices: [mmlu_test, ceval_validation, cmmlu_test]
+template: fewshot
+lang: en
+n_shot: 5
+
+### output
+save_dir: /root/autodl-tmp/saves/llama31-8b/lora/eval
+
+### eval
+batch_size: 4
